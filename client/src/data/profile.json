@@ -1,0 +1,34 @@
+{
+  "name": "Geordi Taylor",
+  "headline": "Bridging the gap between sustainable energy and enterprise data privacy.",
+  "tagline": "Product & Energy",
+  "bio": "I'm a Senior Product Manager specializing in complex SaaS implementations and the intersection of energy policy and technology. Currently driving enterprise-wide initiatives at Con Edison.",
+  "narrativeIntro": "My career has been defined by a constant pursuit of complex systems—from co-founding a biofuels startup to publishing energy policy research at Bloomberg, shaping fintech platforms at Morgan Stanley, and now steering digital transformation at one of the world's largest energy companies.",
+  "credentials": {
+    "education": [
+      { "degree": "M.S. Energy Management", "school": "University of Strathclyde (UK)" },
+      { "degree": "B.A. Economics", "school": "Pace University" }
+    ],
+    "development": [
+      { "program": "International Semester Study", "school": "University of Mannheim (Germany)", "context": "Immersive study in Germany focused on global economics and international business." },
+      { "program": "Python Development Certification", "school": "Borough of Manhattan Community College", "context": "Professional education in data science libraries (Pandas, NumPy) and backend database management." }
+    ],
+    "languages": [
+      { "language": "French", "level": "High Proficiency", "flag": "🇫🇷", "percent": 85, "context": "Advanced professional working proficiency; Minor in French from Pace University." },
+      { "language": "German", "level": "Conversational", "flag": "🇩🇪", "percent": 45, "context": "Basic conversational proficiency developed during immersion at the University of Mannheim." }
+    ],
+    "skills": {
+      "Programming": ["Python", "SQL", "Pandas", "NumPy", "Django", "PostgreSQL"],
+      "Product & Privacy": ["OneTrust", "JIRA", "Agile", "Cybersecurity", "Data Discovery"],
+      "Industry Analysis": ["Energy Policy", "ESG Metrics", "STATA", "Technical Writing"]
+    }
+  },
+  "location": "New York, NY",
+  "email": "Geordi.Taylor@gmail.com",
+  "social": {
+    "linkedin": "https://www.linkedin.com/in/georditaylor",
+    "github": "https://github.com/georditaylor"
+  },
+  "headshotUrl": "/headshot.png",
+  "resumeUrl": "/Geordi_Taylor_Resume.pdf"
+}

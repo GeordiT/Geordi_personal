@@ -1,0 +1,50 @@
+[
+  {
+    "id": "cybersecurity-regulatory-governance",
+    "type": "upcoming",
+    "featured": false,
+    "tag": "Risk Management / Compliance",
+    "title": "Cybersecurity & Regulatory Governance",
+    "date": "",
+    "readTime": "",
+    "summary": "Navigating the 'Compliance-as-Code' evolution: Strategies for aligning technical security architecture with shifting global regulatory standards.",
+    "url": "",
+    "comingSoon": true
+  },
+  {
+    "id": "scaling-privacy-regulated-utilities",
+    "type": "upcoming",
+    "featured": false,
+    "tag": "Data Strategy / Privacy",
+    "title": "Scaling Privacy in Regulated Utilities",
+    "date": "",
+    "readTime": "",
+    "summary": "Lessons from the grid: Managing the tension between data transparency and stringent privacy compliance across complex, multi-entity holding companies.",
+    "url": "",
+    "comingSoon": true
+  },
+  {
+    "id": "macro-economics-decarbonization",
+    "type": "upcoming",
+    "featured": false,
+    "tag": "Sustainability / Economics",
+    "title": "The Macro-Economics of Decarbonization",
+    "date": "",
+    "readTime": "",
+    "summary": "Evaluating how regional policy shifts and market incentives drive—or delay—the adoption of large-scale sustainable energy infrastructure.",
+    "url": "",
+    "comingSoon": true
+  },
+  {
+    "id": "product-strategy-legacy-migrations",
+    "type": "upcoming",
+    "featured": false,
+    "tag": "Product Management",
+    "title": "Product Strategy for Legacy Migrations",
+    "date": "",
+    "readTime": "",
+    "summary": "Moving the needle on technical debt: Navigating the complexities of cloud-based transformations within mission-critical utility billing engines.",
+    "url": "",
+    "comingSoon": true
+  }
+]

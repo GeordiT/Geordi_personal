@@ -15,6 +15,7 @@
     ],
     "languages": [
       { "language": "French", "level": "High Proficiency", "flag": "🇫🇷", "percent": 85, "context": "Advanced professional working proficiency; Minor in French from Pace University." },
+      { "language": "Jamaican Patois", "level": "Native / Fluent", "flag": "🇯🇲", "percent": 100, "context": "Native fluency; leveraging deep cultural and linguistic roots to navigate diverse international environments." },
       { "language": "German", "level": "Conversational", "flag": "🇩🇪", "percent": 45, "context": "Basic conversational proficiency developed during immersion at the University of Mannheim." }
     ],
     "skills": {

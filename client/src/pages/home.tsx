@@ -32,8 +32,7 @@ export default function Home() {
   const [contactError, setContactError] = useState("");
   const { toast } = useToast();
 
-  // Formspree endpoint — replace the ID below with your own from https://formspree.io
-  const FORMSPREE_URL = "https://formspree.io/f/xoqpqovk";
+  const FORMSPREE_URL = "https://formspree.io/f/mpqjowog";
 
   const isValidEmail = (email: string) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
   const isFormValid = contactForm.name.trim() && isValidEmail(contactForm.email) && contactForm.message.trim();
@@ -496,8 +495,8 @@ export default function Home() {
                   </div>
                 </div>
 
-                {/* Honeypot field — Formspree's built-in bot trap */}
-                <input type="text" name="_gotcha" style={{ display: "none" }} tabIndex={-1} autoComplete="off" />
+                <input type="hidden" name="_subject" value="New Portfolio Inquiry - Geordi Taylor" />
+                <input type="text" name="_honey" style={{ display: "none" }} tabIndex={-1} autoComplete="off" />
 
                 <div>
                   <label htmlFor="contact-message" className="block text-sm font-medium text-slate-700 mb-2">Message</label>

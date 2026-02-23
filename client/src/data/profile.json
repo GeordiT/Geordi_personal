@@ -2,8 +2,8 @@
   "name": "Geordi Taylor",
   "headline": "The strategic bridge between business objectives and technical execution.",
   "tagline": "Strategy & Technology",
-  "bio": "A technology leader with over a decade of experience serving as the strategic bridge between business objectives and technical execution in high-stakes, regulated environments. From navigating technical debt and complex stakeholder landscapes in energy and finance, to driving large-scale digital transformation — I bring transferable strategic leadership to every challenge.",
-  "narrativeIntro": "My career has been shaped by a relentless drive to orchestrate complex, regulated systems — from co-founding a biofuels startup to publishing energy policy research at Bloomberg, modernizing fintech platforms at Morgan Stanley, and now leading digital transformation at one of the world's largest energy companies.",
+  "bio": "With a decade-long foundation in Global Energy Management and Sustainability, I leverage a deep understanding of regulated utility markets to drive technical transformation in privacy and security architecture. From orchestrating enterprise-wide data privacy frameworks to leading vulnerability management initiatives across mission-critical infrastructure — I bring cross-functional strategic leadership to the world's most complex systems.",
+  "narrativeIntro": "Privacy Engineering: Orchestrating and scaling data privacy frameworks across a diverse portfolio of enterprise systems, bridging the gap between legacy infrastructure and modern privacy-by-design principles. My career spans co-founding a clean energy startup, publishing energy policy research, modernizing fintech platforms, and now leading privacy and security transformation at one of the world's largest regulated utilities.",
   "credentials": {
     "education": [
       { "degree": "M.S. Energy Management", "school": "University of Strathclyde (UK)" },
@@ -19,9 +19,9 @@
       { "language": "German", "level": "Conversational", "flag": "🇩🇪", "percent": 45, "context": "Basic conversational proficiency developed during immersion at the University of Mannheim." }
     ],
     "skills": {
+      "Privacy & Security Engineering": ["IAM", "OneTrust", "Security Architecture", "Vulnerability Management", "Data Discovery", "Cybersecurity"],
       "Programming": ["Python", "SQL", "Pandas", "NumPy", "Django", "PostgreSQL"],
-      "Product & Privacy": ["OneTrust", "JIRA", "Agile", "Cybersecurity", "Data Discovery"],
-      "Industry Analysis": ["Energy Policy", "ESG Metrics", "STATA", "Technical Writing"]
+      "Industry & Analysis": ["Energy Policy", "ESG Metrics", "STATA", "Technical Writing", "Agile", "JIRA"]
     }
   },
   "location": "New York, NY",

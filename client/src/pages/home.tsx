@@ -576,7 +576,6 @@ export default function Home() {
               </div>
               <div className="space-y-4 flex flex-col">
                 <h4 className="font-medium text-slate-900">Contact</h4>
-                <a href={`mailto:${profileData.email}`} className="text-slate-500 hover:text-primary transition-colors" data-testid="link-email">Email Me</a>
                 <button onClick={handleDownloadResume} className="text-slate-500 hover:text-primary transition-colors text-left" data-testid="link-resume-footer">View Resume / CV</button>
               </div>
             </div>

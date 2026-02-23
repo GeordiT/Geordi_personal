@@ -70,7 +70,7 @@ export default function Home() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ["about", "perspectives", "narrative", "contact"];
+      const sections = ["about", "perspectives", "narrative"];
       let current = "";
       for (const section of sections) {
         const element = document.getElementById(section);
@@ -111,7 +111,6 @@ export default function Home() {
                 { id: "about", label: "About" },
                 { id: "perspectives", label: "Perspectives" },
                 { id: "narrative", label: "Narrative" },
-                { id: "contact", label: "Contact" },
               ].map(link => (
                 <button
                   key={link.id}
@@ -159,7 +158,6 @@ export default function Home() {
               <button onClick={() => scrollToSection("about")} className="text-left border-b border-slate-100 pb-4" data-testid="link-about-mobile">About</button>
               <button onClick={() => scrollToSection("perspectives")} className="text-left border-b border-slate-100 pb-4" data-testid="link-perspectives-mobile">Perspectives</button>
               <button onClick={() => scrollToSection("narrative")} className="text-left border-b border-slate-100 pb-4" data-testid="link-narrative-mobile">Narrative</button>
-              <button onClick={() => scrollToSection("contact")} className="text-left border-b border-slate-100 pb-4" data-testid="link-contact-mobile">Contact</button>
             </div>
             <Button
               onClick={() => { scrollToSection("contact"); }}

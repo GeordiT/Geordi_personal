@@ -565,7 +565,7 @@ export default function Home() {
             <div>
               <div className="font-serif font-semibold text-2xl text-slate-900 mb-6">{profileData.name}.</div>
               <p className="text-slate-600 max-w-sm">
-                At the intersection of energy, privacy, and product management.
+                Securing and modernizing the world's most complex enterprise and energy systems.
               </p>
             </div>
             <div className="grid grid-cols-2 gap-8 md:justify-items-end">

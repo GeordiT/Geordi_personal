@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ArrowRight, Menu, X, Download, ChevronDown, ChevronUp, Clock, GraduationCap, Globe, Languages, Send, CheckCircle, AlertCircle } from "lucide-react";
+import { ArrowRight, Menu, X, ChevronDown, ChevronUp, Clock, GraduationCap, Globe, Languages, Send, CheckCircle, AlertCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { useToast } from "@/hooks/use-toast";
@@ -84,15 +84,6 @@ export default function Home() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const handleDownloadResume = () => {
-    const link = document.createElement("a");
-    link.href = profileData.resumeUrl;
-    link.download = "Geordi_Taylor_Resume.pdf";
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
-
   const scrollToSection = (id: string) => {
     setIsMobileMenuOpen(false);
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
@@ -136,11 +127,11 @@ export default function Home() {
               ))}
             </div>
             <Button
-              onClick={handleDownloadResume}
+              onClick={() => scrollToSection("contact")}
               className="bg-slate-900 hover:bg-slate-800 text-white rounded-full px-6 shadow-sm transition-transform active:scale-95"
-              data-testid="button-resume-desktop"
+              data-testid="button-contact-desktop"
             >
-              View Resume / CV
+              Get in Touch
             </Button>
           </div>
 
@@ -171,12 +162,12 @@ export default function Home() {
               <button onClick={() => scrollToSection("contact")} className="text-left border-b border-slate-100 pb-4" data-testid="link-contact-mobile">Contact</button>
             </div>
             <Button
-              onClick={() => { handleDownloadResume(); setIsMobileMenuOpen(false); }}
+              onClick={() => { scrollToSection("contact"); }}
               size="lg"
               className="mt-8 bg-slate-900 text-white rounded-full w-full"
-              data-testid="button-resume-mobile"
+              data-testid="button-contact-mobile"
             >
-              <Download className="mr-2 w-4 h-4" /> Download Resume
+              Get in Touch
             </Button>
           </motion.div>
         )}
@@ -576,7 +567,7 @@ export default function Home() {
               </div>
               <div className="space-y-4 flex flex-col">
                 <h4 className="font-medium text-slate-900">Contact</h4>
-                <button onClick={handleDownloadResume} className="text-slate-500 hover:text-primary transition-colors text-left" data-testid="link-resume-footer">View Resume / CV</button>
+                <button onClick={() => scrollToSection("contact")} className="text-slate-500 hover:text-primary transition-colors text-left" data-testid="link-contact-footer">Send a Message</button>
               </div>
             </div>
           </div>

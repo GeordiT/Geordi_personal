@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ArrowRight, Menu, X, Download, ChevronDown, ChevronUp, Clock, GraduationCap, Globe, Languages } from "lucide-react";
+import { ArrowRight, Menu, X, Download, ChevronDown, ChevronUp, Clock, GraduationCap, Globe, Languages, Send, CheckCircle, AlertCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { useToast } from "@/hooks/use-toast";
@@ -27,13 +27,51 @@ export default function Home() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("");
   const [expandedRoles, setExpandedRoles] = useState<Record<number, boolean>>({});
+  const [contactForm, setContactForm] = useState({ name: "", email: "", message: "" });
+  const [contactStatus, setContactStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
+  const [contactError, setContactError] = useState("");
   const { toast } = useToast();
+
+  // Formspree endpoint — replace the ID below with your own from https://formspree.io
+  const FORMSPREE_URL = "https://formspree.io/f/xoqpqovk";
+
+  const isValidEmail = (email: string) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  const isFormValid = contactForm.name.trim() && isValidEmail(contactForm.email) && contactForm.message.trim();
+
+  const handleContactSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!isFormValid) return;
+
+    setContactStatus("sending");
+    setContactError("");
+
+    try {
+      const formData = new FormData(e.target as HTMLFormElement);
+      const res = await fetch(FORMSPREE_URL, {
+        method: "POST",
+        body: formData,
+        headers: { "Accept": "application/json" },
+      });
+
+      if (res.ok) {
+        setContactStatus("success");
+        setContactForm({ name: "", email: "", message: "" });
+      } else {
+        const data = await res.json();
+        setContactStatus("error");
+        setContactError(data?.errors?.[0]?.message || "Something went wrong. Please try again.");
+      }
+    } catch {
+      setContactStatus("error");
+      setContactError("Unable to send message. Please try again later.");
+    }
+  };
 
   const insightCards = articlesData;
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ["about", "perspectives", "narrative"];
+      const sections = ["about", "perspectives", "narrative", "contact"];
       let current = "";
       for (const section of sections) {
         const element = document.getElementById(section);
@@ -83,6 +121,7 @@ export default function Home() {
                 { id: "about", label: "About" },
                 { id: "perspectives", label: "Perspectives" },
                 { id: "narrative", label: "Narrative" },
+                { id: "contact", label: "Contact" },
               ].map(link => (
                 <button
                   key={link.id}
@@ -130,6 +169,7 @@ export default function Home() {
               <button onClick={() => scrollToSection("about")} className="text-left border-b border-slate-100 pb-4" data-testid="link-about-mobile">About</button>
               <button onClick={() => scrollToSection("perspectives")} className="text-left border-b border-slate-100 pb-4" data-testid="link-perspectives-mobile">Perspectives</button>
               <button onClick={() => scrollToSection("narrative")} className="text-left border-b border-slate-100 pb-4" data-testid="link-narrative-mobile">Narrative</button>
+              <button onClick={() => scrollToSection("contact")} className="text-left border-b border-slate-100 pb-4" data-testid="link-contact-mobile">Contact</button>
             </div>
             <Button
               onClick={() => { handleDownloadResume(); setIsMobileMenuOpen(false); }}
@@ -393,6 +433,117 @@ export default function Home() {
                 ))}
               </div>
             </div>
+          </div>
+        </section>
+
+        {/* CONTACT FORM */}
+        <section id="contact" className="mb-32 scroll-mt-32">
+          <div className="max-w-2xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-4xl font-serif text-slate-900 mb-4">Get in Touch</h2>
+              <p className="text-slate-600 text-lg leading-relaxed">
+                Have a question, collaboration idea, or just want to connect? I'd love to hear from you.
+              </p>
+            </div>
+
+            {contactStatus === "success" ? (
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                className="text-center py-16 px-8 rounded-2xl border border-primary/20 bg-primary/5"
+              >
+                <CheckCircle className="w-12 h-12 text-primary mx-auto mb-4" />
+                <p className="text-xl font-serif text-slate-900 mb-2">Thank you!</p>
+                <p className="text-slate-600">Your message has been sent. I'll be in touch shortly.</p>
+                <button
+                  onClick={() => setContactStatus("idle")}
+                  className="mt-6 text-sm text-primary hover:underline underline-offset-4"
+                  data-testid="button-send-another"
+                >
+                  Send another message
+                </button>
+              </motion.div>
+            ) : (
+              <form onSubmit={handleContactSubmit} className="space-y-6" data-testid="form-contact">
+                <div className="grid sm:grid-cols-2 gap-6">
+                  <div>
+                    <label htmlFor="contact-name" className="block text-sm font-medium text-slate-700 mb-2">Name</label>
+                    <input
+                      id="contact-name"
+                      name="name"
+                      type="text"
+                      value={contactForm.name}
+                      onChange={(e) => setContactForm(prev => ({ ...prev, name: e.target.value }))}
+                      className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-white text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-all"
+                      placeholder="Your name"
+                      required
+                      data-testid="input-name"
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="contact-email" className="block text-sm font-medium text-slate-700 mb-2">Email</label>
+                    <input
+                      id="contact-email"
+                      name="email"
+                      type="email"
+                      value={contactForm.email}
+                      onChange={(e) => setContactForm(prev => ({ ...prev, email: e.target.value }))}
+                      className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-white text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-all"
+                      placeholder="your@email.com"
+                      required
+                      data-testid="input-email"
+                    />
+                  </div>
+                </div>
+
+                {/* Honeypot field — Formspree's built-in bot trap */}
+                <input type="text" name="_gotcha" style={{ display: "none" }} tabIndex={-1} autoComplete="off" />
+
+                <div>
+                  <label htmlFor="contact-message" className="block text-sm font-medium text-slate-700 mb-2">Message</label>
+                  <textarea
+                    id="contact-message"
+                    name="message"
+                    value={contactForm.message}
+                    onChange={(e) => setContactForm(prev => ({ ...prev, message: e.target.value }))}
+                    rows={5}
+                    className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-white text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-all resize-none"
+                    placeholder="Your message..."
+                    required
+                    data-testid="input-message"
+                  />
+                </div>
+
+                {contactStatus === "error" && (
+                  <motion.div
+                    initial={{ opacity: 0, y: -4 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    className="flex items-center gap-2 text-red-600 text-sm bg-red-50 px-4 py-3 rounded-xl"
+                  >
+                    <AlertCircle className="w-4 h-4 flex-shrink-0" />
+                    {contactError}
+                  </motion.div>
+                )}
+
+                <Button
+                  type="submit"
+                  disabled={!isFormValid || contactStatus === "sending"}
+                  className="bg-slate-900 hover:bg-slate-800 text-white rounded-full px-8 py-3 text-base shadow-sm transition-all active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed"
+                  data-testid="button-submit-contact"
+                >
+                  {contactStatus === "sending" ? (
+                    <span className="flex items-center gap-2">
+                      <span className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+                      Sending...
+                    </span>
+                  ) : (
+                    <span className="flex items-center gap-2">
+                      <Send className="w-4 h-4" /> Send Message
+                    </span>
+                  )}
+                </Button>
+              </form>
+            )}
           </div>
         </section>
 

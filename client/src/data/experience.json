@@ -2,31 +2,31 @@
   {
     "company": "Con Edison",
     "role": "Senior Product Manager",
-    "description": "Architected a multi-entity data privacy program, integrating a third-party SaaS platform with custom metadata retrieval systems to automate privacy operations. I currently lead the enterprise data mapping and risk scanning initiatives to identify and mitigate privacy vulnerabilities across the utility's data lake. Additionally, I chair an interdisciplinary working group focused on fraud risk management, where we design AI-enabled process enhancements to strengthen security and operational resilience.",
-    "tags": ["Data Privacy", "SaaS", "Enterprise", "AI"],
+    "description": "Orchestrating enterprise-wide system transformation across one of the nation's largest utilities. Architected a multi-entity data privacy program, integrating a third-party SaaS platform with custom metadata retrieval systems to automate privacy operations at scale. Leading the digital modernization of legacy data infrastructure to reduce technical debt and strengthen operational resilience. Chairing an interdisciplinary working group on fraud risk management, designing AI-enabled process enhancements that bridge cybersecurity governance with regulatory compliance.",
+    "tags": ["System Orchestration", "Data Privacy", "Legacy Transformation", "AI"],
     "active": true,
     "expandable": true
   },
   {
     "company": "Oracle",
     "role": "Senior Product Manager",
-    "description": "Managed a core calculation engine used by global utilities for billing and scenario modeling. I directed the technical migration of this engine to a cloud-based customer care system, which improved system scalability and data accuracy for household-level utility reporting.",
-    "tags": ["Cloud Migration", "Utility Billing"],
+    "description": "Led the digital modernization of utility billing engines to reduce technical debt and improve system scalability. Directed the technical migration of a core calculation engine to a cloud-based customer care platform, enabling more accurate household-level utility reporting and streamlined scenario modeling for global utility clients.",
+    "tags": ["Cloud Migration", "Legacy Transformation", "Utility Billing"],
     "active": false,
     "expandable": false
   },
   {
     "company": "Morgan Stanley",
     "role": "Product Manager (AVP & Associate)",
-    "description": "Managed the strategic planning and budget for a multi-year modernization of the firm's account approvals platform. I directed the rollout of a new document review workflow that ensured firm-wide compliance with tight regulatory deadlines and authored the backend requirements for unifying client data architecture.",
-    "tags": ["Fintech", "Platform Architecture"],
+    "description": "Drove the strategic planning and budget for a multi-year modernization of the firm's account approvals platform — a high-stakes initiative requiring alignment across compliance, engineering, and executive stakeholders. Directed the rollout of a new document review workflow ensuring firm-wide regulatory compliance under tight deadlines and authored backend requirements for unifying the client data architecture.",
+    "tags": ["Fintech", "Platform Architecture", "Stakeholder Management"],
     "active": false,
     "expandable": false
   },
   {
     "company": "Pace Energy & Climate Center",
     "role": "Energy Analyst",
-    "description": "Conducted quantitative policy and market analyses to support sustainable energy initiatives in the Northeast. I developed data models and Python scripts to optimize analytical outcomes for regulatory proceedings and co-authored case studies used to influence state-level energy policy.",
+    "description": "Conducted quantitative policy and market analyses to support sustainable energy initiatives in the Northeast. Developed data models and Python scripts to optimize analytical outcomes for regulatory proceedings and co-authored case studies used to influence state-level energy policy.",
     "tags": ["Energy Policy", "Data Analysis"],
     "active": false,
     "expandable": false
@@ -34,7 +34,7 @@
   {
     "company": "Bloomberg",
     "role": "Research Analyst (Contractor)",
-    "description": "Analyzed state and federal policy shifts regarding residential solar tariff structures. I published a case study on the scalability of New York's full-value tariff model and evaluated 38 corporate applicants for the Zayed Future Energy Prize using ESG and financial performance metrics.",
+    "description": "Analyzed state and federal policy shifts regarding residential solar tariff structures. Published a case study on the scalability of New York's full-value tariff model and evaluated 38 corporate applicants for the Zayed Future Energy Prize using ESG and financial performance metrics.",
     "tags": ["Solar Energy", "ESG", "Research"],
     "active": false,
     "expandable": false
@@ -42,8 +42,8 @@
   {
     "company": "BGS Energy",
     "role": "Co-Founder & Business Analyst",
-    "description": "Co-founded a biofuels startup, leading negotiations with investors and engineering firms to establish initial operations. I assessed regional trade policies to identify market entry opportunities in the Caribbean and secured non-binding purchase commitments from off-takers through technical briefings.",
-    "tags": ["Startup", "Biofuels", "Clean Tech"],
+    "description": "Co-founded a biofuels startup, orchestrating negotiations with investors and engineering firms to establish initial operations. Assessed regional trade policies to identify market entry opportunities in the Caribbean and secured non-binding purchase commitments from off-takers through technical briefings — demonstrating early-career ability to navigate complex, uncharted regulatory and commercial landscapes.",
+    "tags": ["Startup", "Biofuels", "Clean Tech", "System Orchestration"],
     "active": false,
     "expandable": false
   }

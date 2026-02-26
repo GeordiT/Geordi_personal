@@ -290,8 +290,8 @@ export default function Home() {
                   data-testid={`card-experience-${idx}`}
                 >
                   <div className="md:text-right pt-2">
-                    <h3 className="text-2xl font-serif text-slate-900 group-hover:text-primary transition-colors">{job.company}</h3>
-                    <div className={`${job.active ? "text-primary" : "text-slate-500"} font-medium mt-1`}>{job.role}</div>
+                    <h3 className="text-2xl font-serif text-slate-900 group-hover:text-primary transition-colors">{job.role}</h3>
+                    <div className={`${job.active ? "text-primary" : "text-slate-500"} font-medium mt-1`}>{job.company}</div>
                   </div>
                   <div className="relative">
                     <div className={`hidden md:block absolute -left-8 top-4 w-3 h-3 rounded-full transition-all duration-300 ${

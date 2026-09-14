@@ -1,49 +1,25 @@
 [
   {
-    "id": "cybersecurity-regulatory-governance",
-    "type": "upcoming",
-    "featured": false,
-    "tag": "Cybersecurity & Governance",
-    "title": "Beyond 'Compliance-as-Code'",
-    "date": "",
-    "readTime": "",
-    "summary": "Vulnerability management and IAM in the age of shifting global reliability standards.",
-    "url": "",
-    "comingSoon": true
-  },
-  {
-    "id": "scaling-privacy-regulated-utilities",
-    "type": "upcoming",
-    "featured": false,
-    "tag": "Privacy Engineering",
-    "title": "Scaling Privacy Across the Grid",
-    "date": "",
-    "readTime": "",
-    "summary": "Navigating data transparency in complex, multi-entity holding companies.",
-    "url": "",
-    "comingSoon": true
-  },
-  {
     "id": "macro-economics-decarbonization",
     "type": "upcoming",
     "featured": false,
-    "tag": "Sustainability & Economics",
+    "tag": "SUSTAINABILITY & ECONOMICS",
     "title": "The Macro-Economics of Decarbonization",
     "date": "",
     "readTime": "",
-    "summary": "Evaluating policy shifts and market incentives driving large-scale sustainable energy infrastructure.",
+    "summary": "Evaluating market dynamics, regulatory policy frameworks, and financial capital flows accelerating deep grid decarbonization.",
     "url": "",
     "comingSoon": true
   },
   {
-    "id": "product-strategy-legacy-migrations",
+    "id": "rapid-securitization-resilience-measures",
     "type": "upcoming",
     "featured": false,
-    "tag": "Product Strategy",
-    "title": "Product Strategy for Legacy Migrations",
+    "tag": "CLIMATE FINANCE & INNOVATION",
+    "title": "Rapid Securitization of Resilience Measures",
     "date": "",
     "readTime": "",
-    "summary": "Strategic product leadership in cloud-based transformations for mission-critical enterprise billing engines.",
+    "summary": "Exploring decentralized finance models and micro-securitization structures that enable retail and community crowdfunding for local climate adaptation.",
     "url": "",
     "comingSoon": true
   }
